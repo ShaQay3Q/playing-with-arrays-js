@@ -36,3 +36,22 @@ console.log(typeof listItems);
 const listArr = Array.from(listItems);
 console.log(listArr);
 console.log(typeof listArr);
+
+// uniform
+const hobbies = ["Cooking", "Creep the shit out of people!"];
+
+// mixed
+const personalData = [30, "Hulu", { moreDetails: [] }];
+
+// multi-dimentional => workes even with mixed data: string inside this array
+const analisticData = [
+	[1, 2, 5],
+	[-1, 6, 3],
+	[4, -2, 4],
+];
+
+for (const data of analisticData) {
+	for (const dataPoint of data) {
+		console.log(dataPoint);
+	}
+}
