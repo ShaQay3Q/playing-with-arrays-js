@@ -55,3 +55,38 @@ for (const data of analisticData) {
 		console.log(dataPoint);
 	}
 }
+
+const arr = [];
+console.log(arr);
+// ------------------------------
+//          ADD ELEMENTS
+// ------------------------------
+
+// to the end of an array
+arr.push("pushed (to the end)");
+console.log(arr);
+
+// to the beginning of an array
+arr.unshift("unshift (add to the beginning)");
+console.log(arr);
+
+hobbies.unshift("Coding", "Eating");
+console.log(hobbies);
+
+// ------------------------------
+//         REMOVE ELEMENTS
+// ------------------------------
+
+// from the end of an array
+let el = hobbies.pop();
+console.log(hobbies);
+
+hobbies.unshift(el);
+console.log(hobbies);
+
+// from the beginning of an array
+el = hobbies.shift();
+console.log(hobbies);
+
+hobbies.push(el);
+console.log(hobbies);
