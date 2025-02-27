@@ -107,3 +107,13 @@ console.log(hobbies);
 
 hobbies.splice(2, 2, "Poop", "Pee");
 console.log(hobbies);
+
+el = hobbies.splice(0); // emtpy the whole arr
+console.log(hobbies);
+
+hobbies.splice(0, 0, ...el);
+console.log(hobbies);
+
+// el = hobbies.splice(-1, 1); //acts like pop()
+el = hobbies.splice(-4, 1);
+console.log(hobbies);
