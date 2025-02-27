@@ -90,3 +90,20 @@ console.log(hobbies);
 
 hobbies.push(el);
 console.log(hobbies);
+
+hobbies[7] = "Drinking Tea";
+console.log(hobbies, hobbies[6]); // arr + undefined
+
+// ------------------------------------------------------------------------
+//         SPLICE() METHOD => INSERT ELEMENTS BETWEEN @ ELEMENTS
+// ------------------------------------------------------------------------
+el = hobbies.splice(1, 2);
+
+console.log(hobbies);
+console.log(el);
+
+hobbies.splice(5, 0, ...el);
+console.log(hobbies);
+
+hobbies.splice(2, 2, "Poop", "Pee");
+console.log(hobbies);
