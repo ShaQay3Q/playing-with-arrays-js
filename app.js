@@ -130,22 +130,37 @@ let testResults = [1, 1.5, 5.3, 10.99, -5, 10];
 let slicedArr = testResults.slice(3);
 let storedResults = testResults; // pointer to an array is being store into another variable
 // => //! arrays are refrence values
-console.log("testResults:" + testResults);
-console.log("storedResults:" + storedResults);
-console.log("Push -3.4 into testResualt");
+// console.log("testResults:" + testResults);
+// console.log("storedResults:" + storedResults);
+// console.log("Push -3.4 into testResualt");
 testResults.push(-3.4);
-console.log("testResults:" + testResults);
-console.log("storedResults:" + storedResults);
+// console.log("testResults:" + testResults);
+// console.log("storedResults:" + storedResults);
 
-console.log(
-	"create a slicedArr of testResalt, then push -0.7 into testResult."
-);
+// console.log(
+// "create a slicedArr of testResalt, then push -0.7 into testResult."
+// );
 slicedArr = testResults.slice();
 testResults.push(-0.7);
-console.log("testResults:" + testResults);
-console.log("storedResults:" + storedResults);
-console.log("slicedArr:" + slicedArr);
+// console.log("testResults:" + testResults);
+// console.log("storedResults:" + storedResults);
+// console.log("slicedArr:" + slicedArr);
 
-// console.log(slicedA.rr.push);
+// console.log(slicedArr.slice(-3, -1)); // last 2 elements of slicedArr
 
-console.log(slicedArr);
+// console.log(slicedArr.slice(3)); // everything from index 3 all the way to the end
+
+// ------------------------------------------------------------------------------------------------------
+//         CONCAT() METHOD => adding arrays to arrays -> adds a new element to an array => //! NEW ARRAY
+// ------------------------------------------------------------------------------------------------------
+
+console.log("CONCAT()");
+let concatArr = testResults.concat(2.8);
+console.log(concatArr);
+
+// concatArr = testResults.concat(-3.1, 8.4);
+// console.log(concatArr);
+
+newArray = [-3.1, 8.4];
+concatArr = testResults.concat(...newArray);
+console.log(concatArr);
