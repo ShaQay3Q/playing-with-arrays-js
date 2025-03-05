@@ -95,7 +95,7 @@ hobbies[7] = "Drinking Tea";
 console.log(hobbies, hobbies[6]); // arr + undefined
 
 // ------------------------------------------------------------------------
-//         SPLICE() METHOD => INSERT ELEMENTS BETWEEN @ ELEMENTS
+//         SPLICE() METHOD => INSERT ELEMENTS BETWEEN 2 ELEMENTS
 // ------------------------------------------------------------------------
 el = hobbies.splice(1, 2);
 
