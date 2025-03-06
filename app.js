@@ -146,9 +146,12 @@ testResults.push(-0.7);
 // console.log("storedResults:" + storedResults);
 // console.log("slicedArr:" + slicedArr);
 
-// console.log(slicedArr.slice(-3, -1)); // last 2 elements of slicedArr
+console.log(slicedArr);
+
+console.log(slicedArr.slice(-3, -1)); // elements in indeces -3 and -2 of slicedArr - index element of -1 is out of this range
 
 // console.log(slicedArr.slice(3)); // everything from index 3 all the way to the end
+console.log(slicedArr.slice(-3)); // from index -3 all the way to the end of the array
 
 // ------------------------------------------------------------------------------------------------------
 //         CONCAT() METHOD => adding arrays to arrays -> adds a new element to an array => //! NEW ARRAY
@@ -164,3 +167,16 @@ console.log(concatArr);
 newArray = [-3.1, 8.4];
 concatArr = testResults.concat(...newArray);
 console.log(concatArr);
+
+// -----------------------------------------------------------------------------------
+//         indexOf() & lastIndexOf() METHODS
+// -----------------------------------------------------------------------------------
+
+console.log("indexOf() & lastIndexOf()");
+console.log(hobbies);
+
+le = hobbies.indexOf("Eating", 4); // -1 indecates that the variable is not in the searched range
+console.log(le);
+
+le = hobbies.lastIndexOf("Eating", -4);
+console.log(le);
