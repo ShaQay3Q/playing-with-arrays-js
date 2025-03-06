@@ -180,3 +180,10 @@ console.log(le);
 
 le = hobbies.lastIndexOf("Eating", -4);
 console.log(le);
+
+//! stops after tyhe first very item has been found in the array!
+//! works well for primitive values, but not for refrence values (pointers)
+
+// -----------------------------------------------------------------------------------
+//         indexOf() & lastIndexOf() METHODS
+// -----------------------------------------------------------------------------------
