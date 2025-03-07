@@ -225,10 +225,24 @@ le = hobbies.includes("Poop", -5); // returns falsy/tuthy
 const prices = [10.99, 9.49, 7.49, 8.99];
 console.log(prices);
 const tax = 0.19;
-const adjustedPrices = [];
+// const adjustedPrices = [];
 
-prices.forEach((price, index, prices) =>
-	adjustedPrices.push(price * (1 + tax))
-);
+// prices.forEach((price, index, prices) => {
+// 	const priceObject = { index: index, price: price * (1 + tax) };
+// 	adjustedPrices.push(priceObject);
+// });
 
-console.log(adjustedPrices);
+// console.log(adjustedPrices);
+
+// -----------------------------------------------------------------------------------
+//        MAP() METHODS => returns a new array => have to have RETURN
+//			TRANSFORMS an array
+// -----------------------------------------------------------------------------------
+// const newPrices = [...prices];
+
+const taxAdjustedPrices = prices.map((price, index, prices) => {
+	const newObj = { index: index, price: price * (1 + tax) };
+	return newObj;
+});
+
+console.log(taxAdjustedPrices);
