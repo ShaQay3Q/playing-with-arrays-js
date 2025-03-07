@@ -146,12 +146,12 @@ testResults.push(-0.7);
 // console.log("storedResults:" + storedResults);
 // console.log("slicedArr:" + slicedArr);
 
-console.log(slicedArr);
+// console.log(slicedArr);
 
-console.log(slicedArr.slice(-3, -1)); // elements in indeces -3 and -2 of slicedArr - index element of -1 is out of this range
+// console.log(slicedArr.slice(-3, -1)); // elements in indeces -3 and -2 of slicedArr - index element of -1 is out of this range
 
 // console.log(slicedArr.slice(3)); // everything from index 3 all the way to the end
-console.log(slicedArr.slice(-3)); // from index -3 all the way to the end of the array
+// console.log(slicedArr.slice(-3)); // from index -3 all the way to the end of the array
 
 // ------------------------------------------------------------------------------------------------------
 //         CONCAT() METHOD => adding arrays to arrays -> adds a new element to an array => //! NEW ARRAY
@@ -159,14 +159,14 @@ console.log(slicedArr.slice(-3)); // from index -3 all the way to the end of the
 
 console.log("CONCAT()");
 let concatArr = testResults.concat(2.8);
-console.log(concatArr);
+// console.log(concatArr);
 
 // concatArr = testResults.concat(-3.1, 8.4);
 // console.log(concatArr);
 
 newArray = [-3.1, 8.4];
 concatArr = testResults.concat(...newArray);
-console.log(concatArr);
+// console.log(concatArr);
 
 // -----------------------------------------------------------------------------------
 //         indexOf() & lastIndexOf() METHODS
@@ -176,14 +176,39 @@ console.log("indexOf() & lastIndexOf()");
 console.log(hobbies);
 
 le = hobbies.indexOf("Eating", 4); // -1 indecates that the variable is not in the searched range
-console.log(le);
+// console.log(le);
 
 le = hobbies.lastIndexOf("Eating", -4);
-console.log(le);
+// console.log(le);
 
 //! stops after tyhe first very item has been found in the array!
 //! works well for primitive values, but not for refrence values (pointers)
 
 // -----------------------------------------------------------------------------------
-//         indexOf() & lastIndexOf() METHODS
+//         find() & findIndex() METHODS
+//	find() => gets anther fucntion as argument with 3 agumets (item, index, items) and
+//				return an object or one of items item when the set condition meets
 // -----------------------------------------------------------------------------------
+
+console.log("find() & findIndex()");
+
+let personData = [
+	{ name: "Coco", age: 26 },
+	{ name: "Lotte", age: 28 },
+	{ name: "Laura", age: 35 },
+	{ name: "Sam", age: 31 },
+];
+
+let person = personData.find((person, index, persons) => {
+	return index === 2;
+});
+console.log(person);
+
+person.name = "Paulo";
+
+console.log(person, personData);
+
+let index = personData.findIndex((item, index, items) => item.age === 35);
+console.log(index);
+
+// ------------
