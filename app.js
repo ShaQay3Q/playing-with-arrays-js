@@ -119,7 +119,7 @@ hobbies.splice(0, 0, ...el);
 
 // el = hobbies.splice(-1, 1); //acts like pop()
 el = hobbies.splice(-4, 1);
-console.log(hobbies);
+// console.log(hobbies);
 
 // -----------------------------------------------------------------------------------
 //         SLICE() => brings back a completely new array => used for copying arrays
@@ -202,13 +202,33 @@ let personData = [
 let person = personData.find((person, index, persons) => {
 	return index === 2;
 });
-console.log(person);
+// console.log(person);
 
 person.name = "Paulo";
 
-console.log(person, personData);
+// console.log(person, personData);
 
 let index = personData.findIndex((item, index, items) => item.age === 35);
-console.log(index);
+// console.log(index);
 
-// ------------
+// -----------------------------------------------------------------------------------
+//        INCLUDES() METHODS => works of PRIMITIVE VALUES -> find an element
+// -----------------------------------------------------------------------------------
+
+le = hobbies.includes("Poop", -5); // returns falsy/tuthy
+// console.log(le);
+// console.log(hobbies.indexOf("Poop") !== -1); // same as the line 218 // return falsy/truthy
+
+// -----------------------------------------------------------------------------------
+//        forEach() METHODS => works of PRIMITIVE VALUES -> find an element
+// -----------------------------------------------------------------------------------
+const prices = [10.99, 9.49, 7.49, 8.99];
+console.log(prices);
+const tax = 0.19;
+const adjustedPrices = [];
+
+prices.forEach((price, index, prices) =>
+	adjustedPrices.push(price * (1 + tax))
+);
+
+console.log(adjustedPrices);
