@@ -253,9 +253,9 @@ const taxAdjustedPrices = prices.map((price, index, prices) => {
 // -----------------------------------------------------------------------------------
 console.log("sort()ing & reserve()ing");
 le = prices.sort((a, b) => b - a); // for numbers. Use same logic as compareFn
-console.log("b - a");
+// console.log("b - a");
 
-console.log(le);
+// console.log(le);
 
 le = prices.sort((a, b) => {
 	if (a > b) {
@@ -266,8 +266,16 @@ le = prices.sort((a, b) => {
 		return 1;
 	}
 });
-console.log(le);
+// console.log(le);
 le.reverse(); // gets no arguments
-console.log(le.reverse());
+// console.log(le.reverse());
 
+// -----------------------------------------------------------------------------------
+//        FILTER() METHODS => reduce the length of the array and returns a new array
+//			takes a function => like map(), find()
+//			TRANSFORMS an array
+// -----------------------------------------------------------------------------------
+console.log("filter()");
 
+le = prices.filter((price, index, prices) => {return price > 9});
+console.log(le);
