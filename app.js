@@ -277,5 +277,10 @@ le.reverse(); // gets no arguments
 // -----------------------------------------------------------------------------------
 console.log("filter()");
 
-le = prices.filter((price, index, prices) => {return price > 9});
+le = prices.filter((price, index, prices) => {
+	return price > 9;
+});
+console.log(le);
+
+le = prices.filter((price) => price < 8);
 console.log(le);
