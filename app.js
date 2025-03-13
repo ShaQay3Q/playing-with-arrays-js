@@ -286,11 +286,11 @@ console.log(le);
 le = prices.filter((price) => price < 8);
 console.log(le);
 
-// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
 //        REDUCE() METHODS => works on array of numbers
-//			takes a function => like map(), find()
+//			reduce an array to a simpler value => number[] -> number / string[] -> string
 //			TRANSFORMS an array
-// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
 
 let sum = 0;
 prices.forEach((price) => (sum += price));
