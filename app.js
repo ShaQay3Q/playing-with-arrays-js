@@ -289,7 +289,6 @@ console.log(le);
 // -----------------------------------------------------------------------------------------
 //        REDUCE() METHODS => works on array of numbers
 //			reduce an array to a simpler value => number[] -> number / string[] -> string
-//			TRANSFORMS an array
 // -----------------------------------------------------------------------------------------
 
 let sum = 0;
@@ -308,3 +307,16 @@ sum = prices.reduce((acc, price) => {
 	return acc + price;
 }, initialValue); // add initialValue to the sum
 console.log(sum);
+
+// -----------------------------------------------------------------------------------------
+//        SPLIT() & JOIN() METHODS => works on array of strings
+//			reduce an array to a simpler value => number[] -> number / string[] -> string
+//			TRANSFORMS an array
+// -----------------------------------------------------------------------------------------
+
+const data = "new york;10.99;3000;Amin";
+const transformedData = data.split(";", 2); // only 2 elements
+console.log(transformedData);
+
+const newData = transformedData.join(";"); // when it's not specified, by default adds ","
+console.log(newData);
