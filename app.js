@@ -271,7 +271,8 @@ le.reverse(); // gets no arguments
 // console.log(le.reverse());
 
 // -----------------------------------------------------------------------------------
-//        FILTER() METHODS => reduce the length of the array and returns a new array
+//        FILTER() METHODS => works on array of numbers,
+// 							reduce the length of the array and returns a new array
 //			takes a function => like map(), find()
 //			TRANSFORMS an array
 // -----------------------------------------------------------------------------------
@@ -284,3 +285,26 @@ console.log(le);
 
 le = prices.filter((price) => price < 8);
 console.log(le);
+
+// -----------------------------------------------------------------------------------
+//        REDUCE() METHODS => works on array of numbers
+//			takes a function => like map(), find()
+//			TRANSFORMS an array
+// -----------------------------------------------------------------------------------
+
+let sum = 0;
+prices.forEach((price) => (sum += price));
+console.log(sum);
+
+sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+	return prevValue + curValue;
+});
+console.log(sum);
+
+// sum = prices.reduce((acc, price) => acc + price, initialValue);
+
+const initialValue = 1;
+sum = prices.reduce((acc, price) => {
+	return acc + price;
+}, initialValue); // add initialValue to the sum
+console.log(sum);
