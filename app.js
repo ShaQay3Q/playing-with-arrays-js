@@ -310,8 +310,7 @@ console.log(sum);
 
 // -----------------------------------------------------------------------------------------
 //        SPLIT() & JOIN() METHODS => works on array of strings
-//			reduce an array to a simpler value => number[] -> number / string[] -> string
-//			TRANSFORMS an array
+//			TRANSFORMS strings to arraya - arrays t strings
 // -----------------------------------------------------------------------------------------
 
 const data = "new york;10.99;3000;Amin";
@@ -320,3 +319,35 @@ console.log(transformedData);
 
 const newData = transformedData.join(";"); // when it's not specified, by default adds ","
 console.log(newData);
+
+// -----------------------------------------------------------------------------------------
+//        SPREAD => ...array // pulls the elements out of an array
+// -----------------------------------------------------------------------------------------
+let n = Math.min(...prices); // min() gets only numbers
+console.log(n);
+
+const persons = [
+	{ name: "Sha", age: 10 },
+	{ name: "Lean", age: 12 },
+	{ name: "Houri", age: 11 },
+];
+
+const copiedPersons = [...persons];
+persons.push({ name: "Jonas", age: 9 });
+console.log(persons, copiedPersons);
+
+//! here Objects in the Arrays (refrence values) are NOT getiting coppied, but the refrence values does
+//! threfore, changes in such objects, leads to changes in the coppied array
+
+persons[2].name = "NC";
+persons[1].age = 8;
+console.log(persons, copiedPersons);
+
+const newCopiedPerson = [
+	// creates a new arr with map() then spread it
+	...persons.map((person) => ({ name: person.name, age: person.age })),
+];
+persons[2].name = "Ensi";
+persons[1].age = 10;
+
+console.log(persons, copiedPersons, newCopiedPerson);
