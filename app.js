@@ -315,16 +315,16 @@ console.log(sum);
 
 const data = "new york;10.99;3000;Amin";
 const transformedData = data.split(";", 2); // only 2 elements
-console.log(transformedData);
+// console.log(transformedData);
 
 const newData = transformedData.join(";"); // when it's not specified, by default adds ","
-console.log(newData);
+// console.log(newData);
 
 // -----------------------------------------------------------------------------------------
 //        SPREAD => ...array // pulls the elements out of an array
 // -----------------------------------------------------------------------------------------
 let n = Math.min(...prices); // min() gets only numbers
-console.log(n);
+// console.log(n);
 
 const persons = [
 	{ name: "Sha", age: 10 },
@@ -334,14 +334,14 @@ const persons = [
 
 const copiedPersons = [...persons];
 persons.push({ name: "Jonas", age: 9 });
-console.log(persons, copiedPersons);
+// console.log(persons, copiedPersons);
 
 //! here Objects in the Arrays (refrence values) are NOT getiting coppied, but the refrence values does
 //! threfore, changes in such objects, leads to changes in the coppied array
 
 persons[2].name = "NC";
 persons[1].age = 8;
-console.log(persons, copiedPersons);
+// console.log(persons, copiedPersons);
 
 const newCopiedPerson = [
 	// creates a new arr with map() then spread it
@@ -350,4 +350,12 @@ const newCopiedPerson = [
 persons[2].name = "Ensi";
 persons[1].age = 10;
 
-console.log(persons, copiedPersons, newCopiedPerson);
+// console.log(persons, copiedPersons, newCopiedPerson);
+
+// -----------------------------------------------------------------------------------------
+//        ARRAY DESTRUCTURING
+// -----------------------------------------------------------------------------------------
+const nameData = ["Sara", "Zargar", 20, "female"];
+// ...restInfo => use rest operator to take out rest of the info as an array
+const [firstName, lastName, ...restInfo] = nameData;
+console.log(firstName, lastName, restInfo);
