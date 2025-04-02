@@ -30,3 +30,7 @@ console.log(findMaxAndMin(...numbers));
 const [min, max] = findMaxAndMin(...numbers);
 console.log("min:", min);
 console.log("max:", max);
+
+// create a list where NO duplicate values can be added
+const ids = new Set(numbers);
+console.log(ids);
