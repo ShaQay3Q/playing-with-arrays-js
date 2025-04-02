@@ -36,10 +36,25 @@ function findMax(...numbers) {
 	return curMax;
 }
 
+// findMin
+function findMin(...numbers) {
+	let curMin = numbers[0];
+	numbers.forEach((num) => (num < curMin ? (curMin = num) : curMin));
+	return curMin;
+}
+
+// find MAX and min
+function findMaxMin(...numbers) {
+	return [findMin(...numbers), findMax(...numbers)];
+}
+
 // Destructuring the result into two constants
 const [min, max] = findMaxAndMin(...numbers);
 // console.log("min:", min);
 // console.log("max:", max);
+const [newMin, newMax] = findMaxMin(...numbers);
+console.log(newMin);
+console.log(newMax);
 
 // create a list where NO duplicate values can be added
 const ids = new Set(numbers);
