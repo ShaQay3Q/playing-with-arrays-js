@@ -18,10 +18,15 @@ let sum = numbers.reduce((prevValue, curValue) => {
 });
 console.log(sum);
 
-// findMax
+// findMaxAndMin
 function findMaxAndMin(...numbers) {
 	sortedNumbers = numbers.sort((a, b) => a - b);
 	return [sortedNumbers[0], sortedNumbers[sortedNumbers.length - 1]];
 }
 
 console.log(findMaxAndMin(...numbers));
+
+// Destructuring the result into two constants
+const [min, max] = findMaxAndMin(...numbers);
+console.log("min:", min);
+console.log("max:", max);
